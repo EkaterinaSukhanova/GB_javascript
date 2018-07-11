@@ -9,6 +9,6 @@ function foo (a) {
         }
     };
     return inner;
-};
+}
 
 console.log(foo(5)(6)());
