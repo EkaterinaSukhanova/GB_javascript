@@ -11,7 +11,7 @@ function foo (a) {
     return inner;
 }
 
-console.log(foo(5)(6)());
+console.log(foo(5)(9)(6)());
 
 let result = 1;
 function foo2 (arg) {
@@ -21,4 +21,4 @@ function foo2 (arg) {
     result = result * arg;
     return foo2;
 }
-console.log(foo2(4)(6)());
+console.log(foo2(4)(0)(6)());
