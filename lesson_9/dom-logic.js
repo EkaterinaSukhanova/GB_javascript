@@ -25,8 +25,9 @@ function getFilmComments(filmName) {
 function onAddCommentClick(name) {
     const authorValue = document.getElementById(`author-${name}`).value;
     const commentValue = document.getElementById(`comment-${name}`).value;
+    const starValue = document.getElementById(`star-${name}`).value;
     const film = getFilmByName(name);
-    film.addComment(commentValue, authorValue);
+    film.addComment(commentValue, authorValue, starValue);
     onGenreChoice(film.genre)
 }
 
@@ -35,6 +36,7 @@ function renderCommentForm(film) {
         <div class="form-body">
         <input id="author-${film.name}" class="form-author" placeholder="Ваше имя">
         <input id="comment-${film.name}" class="form-comment" placeholder="Ваш отзыв">
+        <input id="star-${film.name}" class="form-star" placeholder="Ваша оценка">
         <button onclick="onAddCommentClick('${film.name}')">Отправить</button>
         </div>`;
     const form = document.createElement("div");
@@ -77,7 +79,8 @@ function onFilmClick(film, newEl) {
              <div class="film-name">
                    <p>${film.name}</p>
                    <p>Год: ${film.year}</p>
-                   <p>Страна: ${film.country}</p></div>
+                   <p>Страна: ${film.country}</p>
+                   <p>Оценка: ${film.rating()}</p></div>
              <div class="clearfix"></div>`;
         openFilm[film.name] = false;
     } else {
@@ -93,7 +96,8 @@ function renderFilm(film) {
                        <div class="film-name">
                             <p>${film.name}</p>
                             <p>Год: ${film.year}</p>
-                            <p>Страна: ${film.country}</p></div>
+                            <p>Страна: ${film.country}</p>
+                            <p>Оценка: ${film.rating()}</p></div>
                         <div class="clearfix"></div>`;
 
     newEl.addEventListener("click", function () {

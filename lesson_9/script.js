@@ -17,8 +17,8 @@ class Film {
     }
     rating(){
         let sumStars = 0;
-        this.comments.forEach( comment => sumStars += comment.numberStars);
-        return (this.comments.length > 0) ? sumStars / this.comments.length : 0;
+        this.comments.forEach( comment => sumStars += parseInt(comment.numberStars));
+        return (this.comments.length > 0) ? (sumStars / this.comments.length).toFixed(1) : 0;
     }
 }
 

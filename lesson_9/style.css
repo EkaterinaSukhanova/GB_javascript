@@ -85,10 +85,10 @@ img{
     width: 200px;
 }
 
-.chosen{
-    padding: 14px;
-    border: 4px dotted #ecc;
-}
+/*.chosen{*/
+    /*padding: 14px;*/
+    /*border: 4px dotted #ecc;*/
+/*}*/
 
 .comment-form button{
     margin-top: 5px;
