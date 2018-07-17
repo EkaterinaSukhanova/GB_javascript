@@ -1,0 +1,107 @@
+body{
+    background-color: #efefef;
+}
+
+section{
+    width: 500px;
+    margin: 60px auto;
+    background: none;
+}
+.genres, .films{
+    border: 1px solid #dddddd;
+    margin: 15px 0;
+    background-color: white;
+}
+.genres{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.genre{
+    padding: 15px 30px;
+    cursor: pointer;
+}
+.genre:hover{
+    background-color: rgba(221, 221, 230, 0.5);
+}
+.film{
+    /*height: 300px;*/
+    margin: 20px 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    border-bottom: 1px dotted #333;
+}
+.film-name p:first-child{
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.film-name p:first-child:hover{
+    background-color: gainsboro;
+    /*outline: 1px solid #333333;*/
+}
+.film-comment{
+    color: #333333;
+}
+.comment-author{
+    font-weight: 700;
+}
+
+.film button{
+    width: 200px;
+    padding: 6px;
+    font-size: 12px;
+    color: #333333;
+    margin: 20px auto 10px;
+    border-radius: 6px;
+}
+
+.comment-form{
+    margin-top: 30px;
+    width: 400px;
+    padding: 10px;
+    border-radius: 6px;
+    color: #333333;
+    border: 1px solid #ccc;
+}
+
+.comment-form input{
+    margin: 10px 5px 10px 0;
+    padding: 10px;
+    border-radius: 6px;
+    color: #333333;
+    border: 1px solid #ccc;
+    width: 100px;
+}
+
+img{
+    width: 200px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.input.form-comment{
+    width: 200px;
+}
+
+.chosen{
+    padding: 14px;
+    border: 4px dotted #ecc;
+}
+
+.comment-form button{
+    margin-top: 5px;
+}
+
+button{
+    cursor: pointer;
+}
+.clearfix{
+    clear: both;
+}
+
+
+
+
+
